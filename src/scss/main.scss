@@ -1,0 +1,19 @@
+// Import all SCSS files
+@use 'layout';
+@use 'sidebar';
+@use 'topnavbar';
+@use 'chatwindow';
+@use 'home';
+@use 'settings';
+
+// Global styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

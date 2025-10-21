@@ -1,0 +1,78 @@
+.top-navbar {
+  height: 81px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 42px;
+
+  .search-container {
+    flex: 1;
+    max-width: 400px;
+
+    .search-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .search-icon {
+        position: absolute;
+        left: 12px;
+        z-index: 1;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 12px 16px 12px 40px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgba(118, 118, 128, 0.12);
+        font-size: 14px;
+        transition: all 0.3s ease;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: #6b7280;
+        }
+      }
+
+      .search-shortcut {
+        position: absolute;
+        right: 12px;
+        font-size: 12px;
+        color: #9ca3af;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .right-actions {
+    margin-left: 24px;
+
+    .notification-bell {
+      position: relative;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+      border-radius: 10px;
+      background: var(--Fill-Color-Light-Tertiary, rgba(118, 118, 128, 0.12));
+    
+    
+      .notification-dot {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 8px;
+        height: 8px;
+        background-color: #ef4444;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+    }
+  }
+}
