@@ -3,12 +3,14 @@ import { useState } from 'react'
 import Sidebar from './Sidebar'
 import TopNavbar from './TopNavbar'
 import ChatWindow from './ChatWindow'
+import LogoutButton from './LogoutButton'
 
 function Layout({ children }) {
   const location = useLocation()
   const isSettingsPage = location.pathname === '/settings'
   const [isCollapsed, setIsCollapsed] = useState(false)
   const [isChatOpen, setIsChatOpen] = useState(true)
+  
 
   const handleCloseChat = () => {
     setIsChatOpen(false)
@@ -21,6 +23,7 @@ function Layout({ children }) {
 
       {/* Top Navbar - spans across main content and chat */}
       <TopNavbar />
+      <LogoutButton />  
 
       {/* Main Content Area */}
       <main className={`content-area ${isSettingsPage ? 'settings-content' : ''}`}>
